@@ -23,7 +23,7 @@ async function request(path, options = {}) {
 
 export const api = {
   signup: (body) => request("/auth/signup", { method: "POST", body }),
-  login: (body) => request("/auth/login", { method: "POST", body }),
+  login: (body) => request("/api/auth/login", { method: "POST", body }),
   me: () => request("/auth/me"),
   posts: (page = 1, limit = 5) => request(`/posts?page=${page}&limit=${limit}`),
   createPost: (body) => request("/posts", { method: "POST", body }),
